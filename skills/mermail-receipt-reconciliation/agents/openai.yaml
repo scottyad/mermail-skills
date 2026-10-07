@@ -1,0 +1,11 @@
+interface:
+  display_name: "Mermail Receipt Reconciliation"
+  short_description: "Read-only discovery and structured extraction of receipts, invoices, and subscription charges from a Mermail inbox"
+  default_prompt: "Use $mermail-receipt-reconciliation when the user wants to find receipts, invoices, orders, subscription charges, or produce an expense summary from a Mermail inbox."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mermail"
+      description: "Mermail workspace and mailbox MCP server"
+      transport: "streamable_http"
+      url: "https://console.mermail.app/mcp?profile=agent-inbox"
